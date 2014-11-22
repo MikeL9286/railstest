@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<title><%= @title %></title>
+<body>
+<h1><%= @main_header %></h1>
+
+<a href="./home/new">Create a new thing</a>
+
+<br/>
+
+<ul>
+<% @items.each do |i| %>
+  <li><a href="/home/<%= i.id %>/edit"><%= i.name %></a></li>
+<% end %>
+</ul>
+
+
+<!-- <div><a href="/home/1/edit">-> Fake item here</a></div> -->
+
+</body>
+</html>
